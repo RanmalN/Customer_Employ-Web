@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ws_customer/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws_customer/">
+
+<xs:element name="Addcustomer" type="tns:Addcustomer"/>
+
+<xs:element name="AddcustomerResponse" type="tns:AddcustomerResponse"/>
+
+<xs:element name="EditCustomer" type="tns:EditCustomer"/>
+
+<xs:element name="EditCustomerResponse" type="tns:EditCustomerResponse"/>
+
+<xs:element name="Retrive_Customer" type="tns:Retrive_Customer"/>
+
+<xs:element name="Retrive_CustomerResponse" type="tns:Retrive_CustomerResponse"/>
+
+<xs:element name="connectionDB" type="tns:connectionDB"/>
+
+<xs:element name="connectionDBResponse" type="tns:connectionDBResponse"/>
+
+<xs:element name="deleteCustomer" type="tns:deleteCustomer"/>
+
+<xs:element name="deleteCustomerResponse" type="tns:deleteCustomerResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:complexType name="Retrive_Customer">
+<xs:sequence>
+<xs:element name="passCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Retrive_CustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Addcustomer">
+<xs:sequence>
+<xs:element name="Name" type="xs:string" minOccurs="0"/>
+<xs:element name="DOB" type="xs:string" minOccurs="0"/>
+<xs:element name="Address" type="xs:string" minOccurs="0"/>
+<xs:element name="MobileNo" type="xs:string" minOccurs="0"/>
+<xs:element name="Email" type="xs:string" minOccurs="0"/>
+<xs:element name="AccountNo" type="xs:string" minOccurs="0"/>
+<xs:element name="AccountType" type="xs:string" minOccurs="0"/>
+<xs:element name="SortCode" type="xs:string" minOccurs="0"/>
+<xs:element name="Balance" type="xs:string" minOccurs="0"/>
+<xs:element name="card" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddcustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditCustomer">
+<xs:sequence>
+<xs:element name="Name" type="xs:string" minOccurs="0"/>
+<xs:element name="DOB" type="xs:string" minOccurs="0"/>
+<xs:element name="Address" type="xs:string" minOccurs="0"/>
+<xs:element name="MobileNo" type="xs:string" minOccurs="0"/>
+<xs:element name="Email" type="xs:string" minOccurs="0"/>
+<xs:element name="AccountNo" type="xs:string" minOccurs="0"/>
+<xs:element name="AccountType" type="xs:string" minOccurs="0"/>
+<xs:element name="SortCode" type="xs:string" minOccurs="0"/>
+<xs:element name="Balance" type="xs:string" minOccurs="0"/>
+<xs:element name="card" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="connectionDB">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="connectionDBResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="deleteCustomer">
+<xs:sequence>
+<xs:element name="AccountNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -50,26 +50,6 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Addcustomer {
 
-    @XmlElement(name = "Name")
-    protected String name;
-    @XmlElement(name = "DOB")
-    protected String dob;
-    @XmlElement(name = "Address")
-    protected String address;
-    @XmlElement(name = "MobileNo")
-    protected String mobileNo;
-    @XmlElement(name = "Email")
-    protected String email;
-    @XmlElement(name = "AccountNo")
-    protected String accountNo;
-    @XmlElement(name = "AccountType")
-    protected String accountType;
-    @XmlElement(name = "SortCode")
-    protected String sortCode;
-    @XmlElement(name = "Balance")
-    protected String balance;
-    protected String card;
-
     /**
      * Gets the value of the name property.
      * 

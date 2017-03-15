@@ -30,7 +30,32 @@ public class BanKCustomer {
         return "Hello " + txt + " !";
     }
 
-    
+    /**
+     * Web service operation
+     * @return String array
+     */
+    @WebMethod(operationName = "Retrive_Customer")
+    public java.lang.String[] Retrive_Customer(@WebParam(name = "passCode") String passCode) {
+        //TODO write your implementation code here:
+        
+        try{
+            String host = "jdbc:derby://localhost:1527/highStreetbank";
+                    String userN = "highStreetbank";
+                    String passw = "highStreetbank123";
+                  
+                    Connection conn = DriverManager.getConnection(host,userN,passw);
+                     
+                    Statement st = conn.createStatement();        
+                    String sql = "SELECT NAME , ACCOUNTNUMBER FROM customer";
+                    ResultSet rs = st.executeQuery(sql);
+                    ArrayList<String> list=new ArrayList<String>();//Creating arraylist.
+                    
+                    
+        }catch(SQLException err){
+                    System.out.println(err.getMessage());
+                    return null;
+        }
+    }
     
     
 

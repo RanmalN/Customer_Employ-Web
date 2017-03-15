@@ -49,7 +49,18 @@ public class BanKCustomer {
                     String sql = "SELECT NAME , ACCOUNTNUMBER FROM customer";
                     ResultSet rs = st.executeQuery(sql);
                     ArrayList<String> list=new ArrayList<String>();//Creating arraylist.
-                    
+                    while(rs.next()){
+                            String name = rs.getString("NAME");
+                            String accountNo = rs.getString("ACCOUNTNUMBER");
+                            String coll = name + " : " + accountNo;
+                            System.out.println(coll);
+                            list.add(coll);
+                    }
+                    String[] dataSet = new String[list.size()];
+                    for(int x=0;x<list.size();x++){
+                        dataSet[x]=list.get(x);
+                    }
+                    return dataSet;
                     
         }catch(SQLException err){
                     System.out.println(err.getMessage());

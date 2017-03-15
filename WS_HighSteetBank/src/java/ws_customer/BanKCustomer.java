@@ -68,7 +68,10 @@ public class BanKCustomer {
         }
     }
     
-    
+    // db connection 
+    public void connectionDB(String sql) {
+        try{
+    }
 
     
 

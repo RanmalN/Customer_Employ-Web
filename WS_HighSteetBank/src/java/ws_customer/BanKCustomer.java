@@ -71,6 +71,14 @@ public class BanKCustomer {
     // db connection 
     public void connectionDB(String sql) {
         try{
+            String host = "jdbc:derby://localhost:1527/highStreetbank";
+                    String user = "highStreetbank";
+                    String pass = "highStreetbank123";
+                    Connection conn = DriverManager.getConnection(host,user,pass);
+                    conn.close();
+                    } catch (Exception e) {
+         System.err.println(e.getMessage());
+                    }
     }
 
     

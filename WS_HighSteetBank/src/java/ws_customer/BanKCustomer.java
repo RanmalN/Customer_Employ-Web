@@ -75,13 +75,27 @@ public class BanKCustomer {
                     String user = "highStreetbank";
                     String pass = "highStreetbank123";
                     Connection conn = DriverManager.getConnection(host,user,pass);
+                    conn.createStatement().execute(sql);
                     conn.close();
                     } catch (Exception e) {
          System.err.println(e.getMessage());
                     }
     }
 
-    
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "Addcustomer")
+    public String Addcustomer(@WebParam(name = "Name") String Name, @WebParam(name = "DOB") String DOB, @WebParam(name = "Address") String Address, @WebParam(name = "MobileNo") 
+            String MobileNo, @WebParam(name = "Email") String Email, @WebParam(name = "AccountNo") String AccountNo, @WebParam(name = "AccountType") String AccountType,
+            @WebParam(name = "SortCode") String SortCode, @WebParam(name = "Balance") String Balance, @WebParam(name = "card") String card) {
+        //TODO write your implementation code here:
+        String sql = "INSERT INTO customer VALUES('"+Name+"','"+DOB+"','"+Address+"','"+MobileNo+"','"+Email+"','"+AccountNo+
+                "','"+AccountType+"','"+SortCode+"','"+Balance+"','"+card+"')";
+                    connectionDB(sql);
+
+                    return "a";
+    }
 
     
 }

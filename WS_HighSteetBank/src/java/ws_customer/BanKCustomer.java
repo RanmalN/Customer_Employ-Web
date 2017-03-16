@@ -97,5 +97,14 @@ public class BanKCustomer {
                     return "a";
     }
 
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "EditCustomer")
+    public String EditCustomer(@WebParam(name = "Name") String Name, @WebParam(name = "DOB") String DOB, @WebParam(name = "Address") String Address, @WebParam(name = "MobileNo") String MobileNo, @WebParam(name = "Email") String Email, @WebParam(name = "AccountNo") String AccountNo, @WebParam(name = "AccountType") String AccountType, @WebParam(name = "SortCode") String SortCode, @WebParam(name = "Balance") String Balance, @WebParam(name = "card") String card) {
+        //TODO write your implementation code here:
+        
+    }
+
     
 }

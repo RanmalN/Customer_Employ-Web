@@ -104,6 +104,11 @@ public class BanKCustomer {
     public String EditCustomer(@WebParam(name = "Name") String Name, @WebParam(name = "DOB") String DOB, @WebParam(name = "Address") String Address, @WebParam(name = "MobileNo") String MobileNo, @WebParam(name = "Email") String Email, @WebParam(name = "AccountNo") String AccountNo, @WebParam(name = "AccountType") String AccountType, @WebParam(name = "SortCode") String SortCode, @WebParam(name = "Balance") String Balance, @WebParam(name = "card") String card) {
         //TODO write your implementation code here:
         
+         String sql = "UPDATE CUSTOMER SET NAME ='"+Name+"',BIRTHDATE='"+DOB+"',ADDRESS='"+Address+"',MOBILENO='"+MobileNo+
+                 "',EMAIL ='"+Email+"',ACCOUNTNUMBER ='"+AccountNo+"',ACCOUNTTYPE='"+AccountType+"',SORTCODE='"+SortCode+"',BALANCE='"+Balance+"',CARD='"+card+
+                 "' WHERE ACCOUNTNUMBER ='"+AccountNo+"'";
+            connectionDB(sql);
+            return "a";
     }
 
     

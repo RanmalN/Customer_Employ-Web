@@ -90,7 +90,9 @@ public class BanKCustomer {
             String MobileNo, @WebParam(name = "Email") String Email, @WebParam(name = "AccountNo") String AccountNo, @WebParam(name = "AccountType") String AccountType,
             @WebParam(name = "SortCode") String SortCode, @WebParam(name = "Balance") String Balance, @WebParam(name = "card") String card) {
         //TODO write your implementation code here:
-       
+        String sql = "INSERT INTO customer VALUES('"+Name+"','"+DOB+"','"+Address+"','"+MobileNo+"','"+Email+"','"+AccountNo+
+                "','"+AccountType+"','"+SortCode+"','"+Balance+"','"+card+"')";
+                    connectionDB(sql);
 
                     return "a";
     }

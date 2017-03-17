@@ -111,5 +111,14 @@ public class BanKCustomer {
             return "a";
     }
 
-    
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "deleteCustomer")
+    public String deleteCustomer(@WebParam(name = "AccountNumber") String AccountNumber) {
+        //TODO write your implementation code here:
+         String sql = "DELETE FROM CUSTOMER WHERE ACCOUNTNUMBER = '"+AccountNumber+"'";
+                    connectionDB(sql);
+         return "a";
+    }
 }

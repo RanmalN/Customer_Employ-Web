@@ -28,6 +28,18 @@ public class BankEmployee_WS {
     public String hello(@WebParam(name = "name") String txt) {
         return "Hello " + txt + " !";
     }
+    @WebMethod(operationName = "AddEmployee")
+    public String AddEmployee(@WebParam(name = "username") String username, @WebParam(name = "password") String password, @WebParam(name = "name") String name, @WebParam(name = "position") String position)  {
+        
+
+                    String sql = "INSERT INTO EMPLOYEE VALUES('"+username+"','"+password+"','"+name+"','"+position+"')";
+                    connectionDB(sql);
+
+                    return "a";
+                    
+               
+        
+    }
     
     
     

@@ -42,9 +42,34 @@ public class BankEmployee_WS {
     }
     
     
-    
-    
+       @WebMethod(operationName = "EditEmployee")
+    public String EditEmployee(@WebParam(name = "oldUsername") String oldUsername, @WebParam(name = "username") String username, @WebParam(name = "password")
+            String password,
+            @WebParam(name = "fullName") String fullName, @WebParam(name = "Position") String Position){
+
+            String sql = "UPDATE EMPLOYEE SET USERNAME ='"+username+"',PASSWORD='"+password+"',NAME='"+fullName+"',POSITION='"+Position+"' WHERE USERNAME ='"+oldUsername+"'";
+            connectionDB(sql);
+            return "a";
    
+        
+        
+    }
+    
+        @WebMethod(operationName = "deleteEmployee")
+     public String DeleteEmployee(@WebParam(name = "username") String username) {
+       
+                    String sql = "DELETE FROM EMPLOYEE WHERE USERNAME = '"+username+"'";
+                    connectionDB(sql);
+                    return "a";
+               
+        
+    }
+    
+    
+    // db connection 
+    public void connectionDB(String sql) {
+        try{
+    }
     
   
 }

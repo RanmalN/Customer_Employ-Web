@@ -80,5 +80,41 @@ public class BankEmployee_WS {
                     }
     }
     
+    @WebMethod(operationName = "login")
+    public String login(@WebParam(name = "username") String username, @WebParam(name = "password") String password) {
+           String user = "lol";
+           String pass = "lol";
+                try{
+                   String host = "jdbc:derby://localhost:1527/highStreetbank";
+                    String userN = "highStreetbank";
+                    String passw = "highStreetbank123";
+                  
+                    Connection conn = DriverManager.getConnection(host,userN,passw);
+                     
+                    Statement st = conn.createStatement();
+                    String sql = "SELECT USERNAME,PASSWORD FROM EMPLOYEE WHERE USERNAME ='"+username+"'";
+                    ResultSet rs = st.executeQuery(sql);
+                   
+                
+                    while(rs.next()){
+                        if(rs.getString("username").equals(username)&& rs.getString("password").equals(password)){
+                            user = rs.getString("username");
+                            pass = rs.getString("password");
+                        }
+                    }
+                    
+                    if(username.equals(user)&& password.equals(pass)){
+                        return "true";
+       
+                    }
+                }catch(SQLException err){
+                    System.out.println(err.getMessage());
+                    user = err.getMessage();
+                }
+        
+        
+            return user;
+        
+    }
   
 }

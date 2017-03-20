@@ -1,0 +1,6 @@
+WS_HighSteetBank is the webserver 
+HighStreetBank is th gui
+inside db contain the data base file. to add this db in netbeans go to service tab in the left hand side
+then right click the java db > properties> add the dbpasete the db to the location it provide.
+first run web server
+then client
